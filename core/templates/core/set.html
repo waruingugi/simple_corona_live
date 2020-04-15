@@ -1,0 +1,30 @@
+{% extends "core/layout.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <div class="card mt-5 mb-5">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-body text-left">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h5 class="text-center">All Done!</h5>
+                            <hr>
+                                <p>You predictions are all set. Check tomorrows winners to see if you
+                                are one of them.</p>
+
+                            <hr>
+                            <a href="{% url 'home' %}" class="btn btn-primary btn-block">Today's results</a>
+                                    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

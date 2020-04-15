@@ -1,0 +1,56 @@
+{% extends "core/layout.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <div class="card mt-5 mb-5">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-body text-left">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h5 class="text-center">Who will read tomorrow's covid-19 report?</h5>
+                            <hr>
+
+                                <form role="form" action="#" method="POST" autocomplete="off">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col">                
+
+                                            <div class="custom-controls-stacked">
+                                                <!-- Checked Custom Radio -->
+                                                <div class="custom-control custom-radio mb-3">
+                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value='MUTAHI_KAGWE'>
+                                                    <label class="custom-control-label" for="customRadio1">CS Mutahi Kagwe</label>
+                                                </div>
+
+                                                <!-- Normal Custom Radio -->
+                                                <div class="custom-control custom-radio mb-3"> 
+                                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value='MERCY_MWANGANGI'>
+                                                    <label class="custom-control-label" for="customRadio3">CAS Mercy Mwangangi</label>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    </div>
+
+                                    <hr>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-block" type="submit">
+                                            Predict
+                                            <i class="fas fa-arrow-right ml-1 animated headShake infinite slower delay-3s"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

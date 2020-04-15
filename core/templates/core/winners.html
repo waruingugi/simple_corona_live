@@ -1,0 +1,29 @@
+{% extends "core/layout.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <div class="card mt-5 mb-5">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card-body text-left">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h5 class="text-center">Today's Winners</h5>
+                            <hr>
+                                <p>There are no winners today. Please check again tomorrow</p>
+
+                            <hr>
+                            <a href="{% url 'home' %}" class="btn btn-primary btn-block">Go Back</a>
+                                    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
