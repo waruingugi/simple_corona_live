@@ -21,7 +21,7 @@ class AdminPage(UserAdmin):
 
 
 class ChoicesPage(admin.ModelAdmin):
-    list_display = ('timestamp', 'user', 'answers', 'new_cases', 'active_cases', 'total_cases')
+    list_display = ('time_stamp', 'user', 'answers', 'new_cases', 'active_cases', 'total_cases')
     search_fields = ('answers', 'new_cases', 'active_cases', 'total_cases')
 
 
