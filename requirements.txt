@@ -17,4 +17,4 @@ django-referrer-policy
 
 django-feature-policy
 
-Django==2.2.7
+Django==2.2.18
